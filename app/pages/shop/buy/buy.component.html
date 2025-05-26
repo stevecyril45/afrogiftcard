@@ -1,0 +1,51 @@
+<!-- Page Banner Section Start-->
+<div class="page-banner-section section" style="background-color: #080f1e;">
+    <div class="container">
+        <div class="row">
+
+            <!-- Page Title Start -->
+            <div class="page-title text-center col">
+                <h1>Check Gift Card</h1>
+            </div><!-- Page Title End -->
+
+        </div>
+    </div>
+</div><!-- Page Banner Section End-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6" style="margin: 50px;">
+      <div class="card p-4 shadow-sm border-0"  style="box-shadow: 20px 20px 28px rgba(0, 0, 0, 0.25); border-radius: 12px;">
+        <h4 class="section-title mb-3 text-center"  style="color: #080F1E;">Check Card Balance</h4>
+
+        <form [formGroup]="form" (ngSubmit)="checkCard()">
+          <div class="mb-3">
+            <label for="cardNumber" class="form-label">Card Number</label>
+            <input type="text" id="cardNumber" class="form-control" formControlName="cardNumber" placeholder="Enter your card number">
+            <div class="form-text text-danger" *ngIf="form.get('cardNumber')?.invalid && form.get('cardNumber')?.touched">
+              Card number must be at least 16 digits.
+            </div>
+          </div>
+
+          <button type="submit" class="btn btn-primary w-100" [disabled]="form.invalid">Search</button>
+        </form>
+
+        <div *ngIf="notFound" class="alert alert-warning mt-3 text-center">
+          No card found. Please check the number.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

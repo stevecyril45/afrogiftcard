@@ -1,0 +1,18 @@
+.footer-logo-text {
+  
+    position: relative;
+    top: 18px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #F5F6FA ;
+    margin-top: 50px !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  
+.footer-widget p{
+    position: relative;
+    top: 20px;
+}

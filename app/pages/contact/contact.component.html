@@ -1,0 +1,116 @@
+<!-- Page Banner Section Start-->
+<div class="page-banner-section section" style="background-color: #080f1e;">
+    <div class="container">
+        <div class="row">
+
+            <!-- Page Title Start -->
+            <div class="page-title text-center col">
+                <h1>contact us</h1>
+            </div><!-- Page Title End -->
+
+        </div>
+    </div>
+</div><!-- Page Banner Section End-->
+
+
+<!-- Contact Section Start-->
+<div class="contact-section section bg-white pt-120">
+    <div class="container">
+        <div class="row justify-content-center">
+
+            <div class="col-xl-10 col-12">
+
+                <div class="contact-wrapper">
+                    <div class="row">
+
+                        <div class="contact-info col-lg-5 col-12">
+                            <h4 class="section-title">Contact Info</h4>
+                            <p>Have questions or need assistance? Reach out to our friendly support team—we’re here to
+                                help with all your Afro Gift Card inquiries.</p>
+
+                            <ul>
+                                <li><span>Address:</span>House 09,Road 3,Dhaka</li>
+                                <li><span>Email:</span>christ&#64;email.com</li>
+                                <li><span>Phone:</span>+99 854 785 65</li>
+                            </ul>
+                            <div class="contact-social">
+                                <a href="#"><i class="fa fa-facebook"></i></a>
+                                <a href="#"><i class="fa fa-twitter"></i></a>
+                                <a href="#"><i class="fa fa-instagram"></i></a>
+                                <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            </div>
+                        </div>
+                        <div class="contact-form col-lg-7 col-12">
+                            <h4 class="section-title">Send Your Massage</h4>
+                            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate
+                                class="p-3 shadow rounded bg-light">
+                                <div class="mb-3">
+                                    <input type="text" formControlName="name" class="form-control"
+                                        placeholder="Your Name" />
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
+                                        Name is required and must be at least 2 characters.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <input type="email" formControlName="email" class="form-control"
+                                        placeholder="Your Email" />
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+
+                                <div class="mb-3">
+                                    <textarea formControlName="message" class="form-control" placeholder="Your Message"
+                                        rows="4"></textarea>
+                                    <div class="text-danger"
+                                        *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
+                                        Message is required and must be at least 10 characters.
+                                    </div>
+                                </div>
+
+                                <div class="d-grid">
+                                    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
+                                        Submit
+                                    </button>
+                                </div>
+                            </form>
+
+                            <p class="form-messege"></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</div><!-- Contact Section End-->
+
+<!-- Contact Map -->
+<div id="contact-map">
+
+</div>
+
+
+<!-- Success Modal -->
+<div class="modal fade show" tabindex="-1" [ngClass]="{ 'd-block': showSuccessModal }"
+    style="background: rgba(0, 0, 0, 0.5);" *ngIf="showSuccessModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content border-0 shadow">
+            <div class="modal-header bg-success text-white">
+                <h5 class="modal-title"><i class="fas fa-check-circle me-2"></i>Message Sent</h5>
+                <button type="button" class="btn-close btn-close-white" (click)="closeModal()"></button>
+            </div>
+            <div class="modal-body text-center">
+                <p>Your message has been successfully sent. We will contact you soon!</p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-success" (click)="closeModal()">OK</button>
+            </div>
+        </div>
+    </div>
+</div>

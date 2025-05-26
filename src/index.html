@@ -2,12 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Renderer</title>
+  <title>Afro GiftCard</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+    <!-- CSS
+	============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="./assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/ionicons.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="./assets/css/plugins.css">
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+
+    <!-- Slick CSS -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+<!-- Optional Slick Theme -->
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  integrity="sha512-yLpz+BdRdxWv3Lv5SGR5C5K1LEsU3sojPuXFcqECR5FehJkvmKeN5ChX2iXeC1L5raTQj2IcpH3q95m2gCNwPQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+/>
+
+
+<!-- Leaflet CSS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+/>
+
 </head>
 <body>
   <app-root></app-root>
+
+
+  <!-- JS
+============================================ -->
+
+
+<!-- Paystack -->
+ <script src="https://js.paystack.co/v1/inline.js"></script>
+
+
+<!-- jQuery JS -->
+<script src="./assets/js/vendor/jquery-1.12.0.min.js"></script>
+<script src="./assets/js/vendor/jquery-migrate-1.4.1.min.js"></script>
+<!-- Popper JS -->
+<script src="./assets/js/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="./assets/js/bootstrap.min.js"></script>
+<!-- Plugins JS -->
+<script src="./assets/js/plugins.js"></script>
+<!-- Ajax Mail JS -->
+<script src="./assets/js/ajax-mail.js"></script>
+<!-- Main JS -->
+<script src="./assets/js/main.js"></script>
+
+<script src="https://kit.fontawesome.com/15cef8c93e.js" crossorigin="anonymous"></script>
+
+
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Slick JS -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+
+    <!-- Modernizer JS -->
+    <script src="./assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+ <script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const toggleBtn = document.querySelector('.hamburger-icon');
+        const sidebar = document.getElementById('sidebar');
+        const closeBtn = document.querySelector('.sidebar-close');
+
+        toggleBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+            document.body.classList.toggle('sidebar-open');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            document.body.classList.remove('sidebar-open');
+        });
+
+        // Close sidebar if clicking outside
+        document.body.addEventListener('click', (e) => {
+            if (document.body.classList.contains('sidebar-open') && !sidebar.contains(e.target) && !toggleBtn.contains(e.target)) {
+                sidebar.classList.remove('active');
+                document.body.classList.remove('sidebar-open');
+            }
+        });
+    });
+</script>
+
+
+
+<!-- Leaflet JS -->
+<script
+  src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+></script>
+
+    <script>
+      $(document).ready(function(){
+        $('.hero-slider-wrapper').slick({
+          autoplay: true,
+          dots: true,
+          arrows: true,
+          infinite: true,
+          speed: 500,
+          fade: true,
+          cssEase: 'linear'
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const toggleBtn = document.querySelector('.mobile-menu-toggle');
+        const mobileMenu = document.querySelector('.mobile-menu');
+
+        toggleBtn.addEventListener('click', function () {
+          mobileMenu.classList.toggle('open');
+        });
+      });
+    </script>
+
+    <!-- Scrolling -->
+     <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const headerTop = document.querySelector(".header-top-wrapper");
+    let lastScroll = 0;
+
+    window.addEventListener("scroll", function () {
+      let currentScroll = window.pageYOffset;
+
+      if (currentScroll > 100) {
+        // Show header when scrolling down
+        if (currentScroll > lastScroll) {
+          headerTop.classList.add("visible");
+        } else {
+          headerTop.classList.add("visible");
+        }
+      } else {
+        headerTop.classList.remove("visible");
+      }
+
+      lastScroll = currentScroll;
+    });
+  });
+</script>
+
+
+    <script>
+      window.addEventListener('scroll', function () {
+          const header = document.getElementById('stickyHeader');
+          const offset = 100; // Distance to scroll before it becomes sticky
+
+          if (window.scrollY > offset) {
+              header.classList.add('sticky');
+          } else {
+              header.classList.remove('sticky');
+          }
+      });
+  </script>
+
+    <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Set map center [latitude, longitude]
+    const map = L.map("contact-map").setView([6.5244, 3.3792], 13); // Example: Lagos, Nigeria
+
+    // Add OpenStreetMap tile layer
+    L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    }).addTo(map);
+
+    // Add marker
+    L.marker([6.5244, 3.3792])
+      .addTo(map)
+      .bindPopup("<b>Afro Gift Cards HQ</b><br>Lagos, Nigeria")
+      .openPopup();
+  });
+</script>
+
 </body>
 </html>

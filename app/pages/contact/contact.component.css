@@ -1,0 +1,107 @@
+  #contact-map {
+    width: 100%;
+    height: 400px;
+    z-index: 0; /* Ensure it shows behind modals if needed */
+  }
+
+  @media (max-width: 768px) {
+    #contact-map {
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    #contact-map {
+      height: 250px;
+    }
+  }
+
+  .section-title{
+    color: #080F1E;
+  }
+  p, li span, li{
+    color: #000;
+  }
+  i{
+    color: #080F1E;
+  }
+  i:hover{
+    color: #0075e5;
+  }
+  
+
+
+
+  .success-modal {
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  border: none;
+  background: #ffffff;
+}
+
+.success-icon {
+  font-size: 3.5rem;
+  color: #0075e5; /* Bootstrap success green */
+  animation: pop 0.4s ease-out;
+}
+
+.success-title {
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.success-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.modal-header{
+    background-color: #080F1E !important;
+}
+
+.modal-header h5{
+    color: #fff !important;
+}
+.modal-header h5 i{
+    color: #0075e5 !important;
+}
+
+.modal-footer button{
+    background-color: #0075e5 !important;
+    color: #fff !important;
+}
+
+.modal-footer button:hover{
+    background-color: #080F1E !important;
+    color: #fff !important;
+}
+@keyframes pop {
+  0% {
+    transform: scale(0.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Optional: Responsive tweaks */
+@media (max-width: 480px) {
+  .success-modal {
+    padding: 1.5rem 1rem;
+  }
+
+  .success-title {
+    font-size: 1.25rem;
+  }
+
+  .success-text {
+    font-size: 0.95rem;
+  }
+
+  .success-icon {
+    font-size: 3rem;
+  }
+}

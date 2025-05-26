@@ -1,0 +1,297 @@
+<!-- Page Banner Section Start-->
+<div
+  class="page-banner-section section"
+  style="background-color: #080f1e;"
+>
+  <div class="container">
+    <div class="row">
+      <!-- Page Title Start -->
+      <div class="page-title text-center col">
+        <h1>Partner with us</h1>
+      </div>
+      <!-- Page Title End -->
+    </div>
+  </div>
+</div>
+<!-- Page Banner Section End-->
+
+<!-- Partner Info Section -->
+<div class="about-section section pt-120 pb-90">
+  <div class="container">
+    <div class="row flex-row-reverse">
+      <!-- About Image -->
+      <div class="about-image col-lg-6 col-12 mb-30">
+        <a
+          class="video-popup"
+          ><img src="../../../assets/img/partner.jpg" alt=""
+        /></a>
+      </div>
+
+      <!-- Mission Content -->
+      <div class="about-content col-lg-6 col-12 mb-30">
+        <h2 class="section-title" style="color: #080f1e">
+          Become an Afro Gift Card Partner
+        </h2>
+        <p>
+          Afro Gift Card is accepted only in verified partner stores. Our
+          trusted partners form the exclusive network where every Afro Gift Card
+          is valid. Interested businesses can register to become a partner,
+          receive a unique API key, and access a dedicated partner dashboard to
+          manage their store and track redemptions.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Client Section Start-->
+<div class="client-section section">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="client-slider text-center" id="clientSlider">
+          <div class="single-client">
+            <img src="../../../assets/img/netflix.jpg" alt="client" style="width: 100px;"/>
+          </div>
+          <div class="single-client">
+            <img src="../../../assets/img/ama1.jpg" alt="client" />
+          </div>
+          <div class="single-client">
+            <img src="../../../assets/img/spotify.jpg" alt="client" />
+          </div>
+          <div class="single-client">
+            <img src="../../../assets/img/walmart.jpg" alt="client" />
+          </div>
+          <div class="single-client">
+            <img src="../../../assets/img/play.jpg" alt="client" />
+          </div>
+          <div class="single-client">
+            <img src="../../../assets/img/ebay.jpg" alt="client" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contact-section section bg-white pt-120">
+  <section class="partner-section py-5 pt-120">
+    <div class="container text-center">
+      <button
+        class="btn btn-primary btn-lg px-4 shadow-sm"
+        data-bs-toggle="modal"
+        data-bs-target="#partnerModal"
+      >
+        <i class="fas fa-plus-circle me-2"></i>Become a Partner
+      </button>
+    </div>
+  </section>
+  <!-- Client Section End-->
+</div>
+
+<!-- Partner Registration Modal -->
+<div
+  class="modal fade"
+  id="partnerModal"
+  tabindex="-1"
+  aria-labelledby="partnerModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content border-0 shadow">
+      <form [formGroup]="partnerForm" (ngSubmit)="onSubmit()">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="partnerModalLabel">
+            <i class="fas fa-store-alt me-2"></i> Partner Registration
+          </h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+
+        <div class="modal-body py-4 px-4">
+          <div class="row g-3">
+            <!-- Business Name -->
+            <div class="col-md-6">
+              <label class="form-label">Business Name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="businessName"
+                placeholder="Enter business name"
+              />
+              <div class="text-danger" *ngIf="isInvalid('businessName')">
+                Business Name is required.
+              </div>
+            </div>
+
+            <!-- First Name -->
+            <div class="col-md-6">
+              <label class="form-label">First Name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="firstName"
+                placeholder="Enter first name"
+              />
+              <div class="text-danger" *ngIf="isInvalid('firstName')">
+                First Name is required.
+              </div>
+            </div>
+
+            <!-- Last Name -->
+            <div class="col-md-6">
+              <label class="form-label">Last Name</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="lastName"
+                placeholder="Enter last name"
+              />
+              <div class="text-danger" *ngIf="isInvalid('lastName')">
+                Last Name is required.
+              </div>
+            </div>
+
+            <!-- Email -->
+            <div class="col-md-6">
+              <label class="form-label">Email Address</label>
+              <input
+                type="email"
+                class="form-control"
+                formControlName="email"
+                placeholder="Enter email"
+              />
+              <div class="text-danger" *ngIf="isInvalid('email')">
+                Valid Email is required.
+              </div>
+            </div>
+
+            <!-- CAC Registration (Yes/No) -->
+            <div class="col-md-12">
+              <label class="form-label"
+                >Is your business incorporated with the Corporate Affairs
+                Commission (CAC)?</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  formControlName="cac"
+                  value="yes"
+                  id="cacYes"
+                />
+                <label class="form-check-label" for="cacYes">Yes</label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  formControlName="cac"
+                  value="no"
+                  id="cacNo"
+                />
+                <label class="form-check-label" for="cacNo">No</label>
+              </div>
+              <div class="text-danger" *ngIf="isInvalid('cac')">
+                Please select an option.
+              </div>
+            </div>
+
+            <!-- Business Registration Type -->
+            <div class="col-md-6">
+              <label class="form-label">Business Registration Type</label>
+              <select class="form-select" formControlName="registrationType">
+                <option value="" disabled selected>Select type</option>
+                <option value="sole">Sole Proprietorship</option>
+                <option value="limited">Limited Liability</option>
+              </select>
+              <div class="text-danger" *ngIf="isInvalid('registrationType')">
+                Please select a registration type.
+              </div>
+            </div>
+
+            <!-- Password -->
+            <div class="col-md-6">
+              <label class="form-label">Password</label>
+              <input
+                type="password"
+                class="form-control"
+                formControlName="password"
+                placeholder="Enter password"
+              />
+              <div class="text-danger" *ngIf="isInvalid('password')">
+                Password is required (min 6 characters).
+              </div>
+            </div>
+
+            <!-- Terms and Conditions Checkboxes -->
+            <div class="col-12">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  formControlName="terms1"
+                  id="terms1"
+                />
+                <label class="form-check-label" for="terms1">
+                  I agree to the Terms and Conditions
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  formControlName="terms2"
+                  id="terms2"
+                />
+                <label class="form-check-label" for="terms2">
+                  I agree to the Privacy Policy
+                </label>
+              </div>
+              <div
+                class="text-danger"
+                *ngIf="isInvalid('terms1') || isInvalid('terms2')"
+              >
+                You must agree to all conditions.
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
+            <i class="fas fa-times me-1"></i> Cancel
+          </button>
+          <button
+            class="btn btn-primary"
+            type="submit"
+            [disabled]="partnerForm.invalid"
+          >
+            <i class="fas fa-paper-plane me-2"></i> Register
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Success Modal -->
+<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 shadow text-center p-4">
+      <div class="modal-body">
+        <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
+        <h4 class="mb-2">Registration Successful!</h4>
+        <p class="text-muted">
+          Your application has been submitted successfully.
+        </p>
+        <button class="btn btn-primary mt-3" data-bs-dismiss="modal">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

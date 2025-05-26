@@ -1,0 +1,16 @@
+<button (click)="toggleClass()">Submit</button>
+
+<div [class.danger]="isChange">Changing Class</div>
+
+<p [class.success]="!hasError" [class.error]="hasError">Status message</p>
+
+
+
+<div [ngClass]="{
+    'active': isActive,
+    'highlight': shouldHighlight,
+    'dark-theme': isDarkMode
+  }">
+    User Dashboard
+  </div>
+  
