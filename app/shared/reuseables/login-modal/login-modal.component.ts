@@ -22,7 +22,7 @@ export class LoginModalComponent implements OnInit, OnDestroy {
   ) {
     // Sanitize the iframe src URL
     const key = environment.authApi; // Replace with dynamic key, e.g., from AuthService or route
-    const url = `https://auth-bjoi.onrender.com/external/${key}`;
+    const url = `https://auth.searchforcleaner.com/external/${key}`;
     this.src = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     console.log('Sanitized iframe src:', url);
 
@@ -39,7 +39,7 @@ export class LoginModalComponent implements OnInit, OnDestroy {
 
   private handleMessage(event: MessageEvent) {
     // console.log(event)
-    if (event.origin !== 'https://auth-bjoi.onrender.com') return;
+    if (event.origin !== 'https://auth.searchforcleaner.com') return;
     console.log('Message received:', event.data);
     this.userService.saveUserData(event.data);
     if (event.data.type === 'loginSuccess') {
