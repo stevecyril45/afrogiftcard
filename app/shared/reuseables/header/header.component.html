@@ -10,16 +10,16 @@
 
                         <!-- Header Social -->
                         <div class="header-social col-md-4 col-12">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <!-- <a href="#"><i class="fa fa-facebook"></i></a>
                             <a href="#"><i class="fa fa-twitter"></i></a>
                             <a href="#"><i class="fa fa-linkedin"></i></a>
                             <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-pinterest-p"></i></a>
+                            <a href="#"><i class="fa fa-pinterest-p"></i></a> -->
                         </div>
 
                         <!-- Header Logo -->
                         <div class="header-logo col-md-4 col-12">
-                            <a href="index.html" class="logo">Afro Gift Card</a>
+                            <a href="/home" class="logo">Afro Gift Card</a>
                         </div>
 
                         <!-- Hamburger -->
@@ -95,7 +95,7 @@
 
                 <!-- Header Bottom Logo -->
                 <div class="header-bottom-logo">
-                    <a href="index.html" class="logo"><img src="../../../assets/img/logo.png" alt="logo"></a>
+                    <a href="/home" class="logo"><img src="../../../assets/img/logo.png" alt="logo"></a>
                 </div>
 
                 <!-- Main Menu -->
@@ -103,7 +103,7 @@
                     <ul>
                         <li class="active"><a href="/home">home</a></li>
 
-                        <li><a href="/about">about</a></li>
+                        <li><a routerLink="/about">about</a></li>
                         <!-- <li><a href="#">pages</a>
                             <ul class="sub-menu">
                                 <li><a href="cart.html">cart</a></li>
@@ -111,19 +111,19 @@
                                 <li><a href="wishlist.html">wishlist</a></li>
                             </ul>
                         </li> -->
-                        <li><a href="/partner">partner</a>
+                        <li><a routerLink="/partner">partner</a>
                             <!-- <ul class="sub-menu">
                                 <li><a href="blog.html">blog page</a></li>
                                 <li><a href="blog-details.html">blog details</a></li>
                             </ul> -->
                         </li>
-                        <li><a href="shop.html">shop</a>
+                        <li><a routerLink="shop.html">shop</a>
                             <ul class="sub-menu">
-                                <li><a href="/check-giftcard">Check GiftCard</a></li>
-                                <li><a href="/buy-giftcard">Buy GiftCard</a></li>
+                                <li><a routerLink="/check-giftcard">Check GiftCard</a></li>
+                                <li><a routerLink="/buy-giftcard">Buy GiftCard</a></li>
                             </ul>
                         </li>
-                        <li><a href="/contact">contact</a></li>
+                        <li><a routerLink="/contact">contact</a></li>
                     </ul>
                 </nav>
 
@@ -144,15 +144,15 @@
     <button class="btn-close btn-close-white m-3 sidebar-close" aria-label="Close"></button>
     <ul class="nav flex-column p-4">
         <li class="nav-item"><a class="nav-link text-white" href="/home">Home</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="/about">About</a></li>
-        <li class="nav-item"><a class="nav-link text-white" href="/partner">Partner</a></li>
+        <li class="nav-item"><a class="nav-link text-white" routerLink="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link text-white" routerLink="/partner">Partner</a></li>
         <li class="nav-item">
             <a class="nav-link text-white" href="#">Shop</a>
             <ul class="nav flex-column ms-3">
-                <li><a class="nav-link text-white" href="/check-giftcard">Check GiftCard</a></li>
-                <li><a class="nav-link text-white" href="/buy-giftcard">Buy GiftCard</a></li>
+                <li><a class="nav-link text-white" routerLink="/check-giftcard">Check GiftCard</a></li>
+                <li><a class="nav-link text-white" routerLink="/buy-giftcard">Buy GiftCard</a></li>
             </ul>
         </li>
-        <li class="nav-item"><a class="nav-link text-white" href="/contact">Contact</a></li>
+        <li class="nav-item"><a class="nav-link text-white" routerLink="/contact">Contact</a></li>
     </ul>
 </div>

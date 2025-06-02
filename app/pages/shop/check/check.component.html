@@ -13,11 +13,12 @@
 </div><!-- Page Banner Section End-->
 
 
-<div class="container mt-5" *ngIf="isLoggedIn">
+<div class="about-section section pt-120 pb-90" *ngIf="isLoggedIn">
     <div class="row justify-content-center">
         <div class="col-md-8 col-lg-6">
-            <div class="card p-4 shadow-sm border-0"   style="box-shadow: 20px 20px 28px rgba(0, 0, 0, 0.25); border-radius: 12px;">
-                <h2 class="section-title mb-4"  style="color: #080F1E;">Buy Gift Card</h2>
+            <div class="card p-4 shadow-sm border-0"
+                style="box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.35) !important; border-radius: 12px;">
+                <h2 class="section-title mb-4" style="color: #080F1E;">Buy Gift Card</h2>
                 <form [formGroup]="form" (ngSubmit)="submit()">
                     <div class="mb-3">
                         <label class="form-label">Full Name</label>
@@ -79,17 +80,22 @@
     </div>
 </div>
 
-<div class="container mt-5" *ngIf="!isLoggedIn">
-  <div class="row justify-content-center">
-      <div class="col-md-8 col-lg-6">
-          <div class="card p-4 shadow-sm border-0"   style="box-shadow: 20px 20px 28px rgba(0, 0, 0, 0.25); border-radius: 12px;">
-              <h2 class="section-title mb-4"  style="color: #080F1E;">Login</h2>
-              <button mat-raised-button (click)="openLoginModal()" [disabled]="isLoggedIn" >
-                {{ isLoggedIn ? 'Welcome' : 'Sign In' }}
-              </button>
-          </div>
-      </div>
-  </div>
+<div class="about-section section pt-120 pb-90" *ngIf="!isLoggedIn">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card p-4 shadow-sm border-0"
+                style="box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.35) !important; border-radius: 12px;">
+                <h2 class="section-title mb-4 text-center" style="color: #080F1E;">
+                      Please Log In to Purchase a Gift Card
+                </h2>
+                <div style="text-align: center;">
+                    <button mat-raised-button (click)="openLoginModal()" [disabled]="isLoggedIn"
+                        class="btn animated-button">
+                        {{ isLoggedIn ? 'Welcome' : 'Sign In' }}
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </div>
 </div>
-
-

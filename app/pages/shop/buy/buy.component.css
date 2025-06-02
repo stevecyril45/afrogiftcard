@@ -1,3 +1,37 @@
 p, label{
     color: black;
 }
+
+
+
+  .animated-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #080F1E;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease;
+}
+
+.animated-button::after {
+    content: '→';
+    position: absolute;
+    right: -20px;
+    opacity: 0;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.animated-button:hover {
+    background-color: #0075e5;
+    padding-right: 36px;
+}
+
+.animated-button:hover::after {
+    right: 12px;
+    opacity: 1;
+}

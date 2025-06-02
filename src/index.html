@@ -180,7 +180,7 @@
     <script>
   document.addEventListener("DOMContentLoaded", function () {
     // Set map center [latitude, longitude]
-    const map = L.map("contact-map").setView([6.5244, 3.3792], 13); // Example: Lagos, Nigeria
+    const map = L.map("contact-map").setView([6.4661, 3.32724], 10); // Example: Lagos, Nigeria
 
     // Add OpenStreetMap tile layer
     L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
@@ -189,7 +189,7 @@
     }).addTo(map);
 
     // Add marker
-    L.marker([6.5244, 3.3792])
+    L.marker([6.4661, 3.2724])
       .addTo(map)
       .bindPopup("<b>Afro Gift Cards HQ</b><br>Lagos, Nigeria")
       .openPopup();

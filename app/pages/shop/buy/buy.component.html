@@ -24,10 +24,10 @@
 
 
 
-<div class="container mt-5">
+<div class="about-section section pt-120 pb-90">
   <div class="row justify-content-center">
     <div class="col-md-6" style="margin: 50px;">
-      <div class="card p-4 shadow-sm border-0"  style="box-shadow: 20px 20px 28px rgba(0, 0, 0, 0.25); border-radius: 12px;">
+      <div class="card p-4 shadow-sm border-0"  style="box-shadow: 30px 30px 40px rgba(0, 0, 0, 0.35) !important; border-radius: 12px;">
         <h4 class="section-title mb-3 text-center"  style="color: #080F1E;">Check Card Balance</h4>
 
         <form [formGroup]="form" (ngSubmit)="checkCard()">
@@ -39,7 +39,7 @@
             </div>
           </div>
 
-          <button type="submit" class="btn btn-primary w-100" [disabled]="form.invalid">Search</button>
+          <button type="submit" class="btn btn-primary animated-button w-100" [disabled]="form.invalid">Search</button>
         </form>
 
         <div *ngIf="notFound" class="alert alert-warning mt-3 text-center">
