@@ -1,17 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, AfterViewInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ContactFormDetails } from 'app/core/models/contactForm';
 import { ContactService } from 'app/core/service/contact.service';
+
+declare let L: any;
+
+// Fix default icon path
+delete (L.Icon.Default.prototype as any)._getIconUrl;
+
 
 @Component({
   selector: 'app-contact',
   templateUrl: './contact.component.html',
   styleUrls: ['./contact.component.css']
 })
-export class ContactComponent {
+export class ContactComponent implements AfterViewInit{
  contactForm: FormGroup;
   showSuccessModal: boolean = false;
   id!: string;
+
+  private map: any;
+
+ ngAfterViewInit(): void {
+     this.initMap();
+ }
+ private initMap(): void {
+    this.map = L.map('contact-map').setView([6.4661, 3.32724], 10);
+
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution:
+        '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(this.map);
+
+    L.marker([6.4661, 3.2724])
+      .addTo(this.map)
+      .bindPopup('<b>Afro Gift Cards HQ</b><br>Lagos, Nigeria')
+      .openPopup();
+  }
+
+
 
   constructor(private fb: FormBuilder, private contactService: ContactService) {
     this.contactForm = this.fb.group({

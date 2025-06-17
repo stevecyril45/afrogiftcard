@@ -172,3 +172,52 @@ body.sidebar-open::before {
     transform: rotate(-45deg) translateY(-8px);
 }
 
+
+
+/* Header Logo */
+.header-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+
+  .logo img {
+    max-width: 180px;
+    height: 100%;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .logo img:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* 🔁 Responsive Tweaks */
+@media (max-width: 1024px) {
+  .header-logo .logo img {
+    max-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-logo .logo img {
+    max-width: 140px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    justify-content: flex-start;
+    padding-left: 15px;
+  }
+
+  .header-logo .logo img {
+    max-width: 120px;
+  }
+}
+
+@media (max-width: 320px) {
+  .header-logo .logo img {
+    max-width: 100px;
+  }
+}

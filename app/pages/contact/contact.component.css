@@ -4,17 +4,24 @@
     z-index: 0; /* Ensure it shows behind modals if needed */
   }
 
-  @media (max-width: 768px) {
-    #contact-map {
-      height: 300px;
-    }
+@media (max-width: 1024px) {
+  #contact-map {
+    height: 350px;
   }
+}
 
-  @media (max-width: 480px) {
-    #contact-map {
-      height: 250px;
-    }
+@media (max-width: 768px) {
+  #contact-map {
+    height: 300px;
   }
+}
+
+@media (max-width: 480px) {
+  #contact-map {
+    height: 250px;
+  }
+}
+
 
   .section-title{
     color: #080F1E;

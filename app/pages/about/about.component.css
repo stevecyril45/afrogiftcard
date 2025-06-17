@@ -59,3 +59,14 @@ h2, .wrap p{
 .fa, .counter{
   color: #0075e5 !important;
 }
+
+li, strong{
+  color: #080F1E !important;
+}
+
+.about-image{
+  padding-top: 50px;
+}
+.about-image img{
+  max-width: 100%;
+}

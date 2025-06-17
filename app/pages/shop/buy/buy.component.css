@@ -2,10 +2,19 @@ p, label{
     color: black;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+
 
 
   .animated-button {
-    display: inline-block;
+    width: 150px !important;
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    margin: auto;
     padding: 12px 24px;
     background-color: #080F1E;
     color: #fff;

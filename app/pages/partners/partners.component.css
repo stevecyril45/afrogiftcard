@@ -339,5 +339,30 @@ h2, .wrap p{
   color: #0075e5 !important;
 }
 
+li, strong{
+  color: #080F1E !important;
+}
 
-/* Partner's Logo */
+.about-image{
+  padding-top: 80px;
+}
+
+
+
+.custom-ul {
+  list-style: none; /* Remove default bullets */
+  padding-left: 0;
+}
+
+.custom-ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.custom-ul li i {
+  color: #0075e5; /* Or any color that fits your theme */
+  position: absolute;
+  left: 0;
+  top: 3px;
+}
