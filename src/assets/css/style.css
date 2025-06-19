@@ -817,7 +817,7 @@ body {
   }
   @media only screen and (max-width: 767px) {
     #scrollUp {
-      display: none !important;
+      display: block !important;
     }
   }
   #scrollUp i {
