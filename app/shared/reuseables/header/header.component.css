@@ -7,21 +7,21 @@
     width: 100%;
     z-index: 1000;
   }
-  
+
   .mobile-menu.open {
     display: block;
   }
-  
+
   .mobile-menu ul {
     list-style: none;
     padding: 1rem;
   }
-  
+
   .mobile-menu ul li {
     padding: 0.5rem 0;
     border-bottom: 1px solid #ccc;
   }
-  
+
 
   /* Logo */
   .logo {
@@ -36,12 +36,12 @@
     letter-spacing: 1px;
     transition: transform 0.3s ease, letter-spacing 0.3s ease;
   }
-  
+
   .logo:hover {
     transform: scale(1.05);
     letter-spacing: 2px;
   }
-  
+
   li a, i{
     color: #FFFFFF !important;
   }
