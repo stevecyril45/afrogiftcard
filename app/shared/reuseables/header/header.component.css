@@ -186,7 +186,11 @@ body.sidebar-open::before {
     height: 70px;
     transition: transform 0.3s ease-in-out;
   }
-
+  
+  .logo h2 i{
+    color: #0075e5;
+    margin-right: 10px;
+  }
   .logo img:hover {
     transform: scale(1.05);
   }
@@ -213,6 +217,7 @@ body.sidebar-open::before {
 
   .header-logo .logo img {
     max-width: 80px;
+    height: 40px;
   }
 }
 
