@@ -1843,32 +1843,43 @@ body {
     background-position: center center;
     background-repeat: no-repeat;
     padding: 280px 0;
+  height: 900px !important;
     /*-- Hero Content --*/
     /*-- Hero Content Animation --*/
   }
   @media only screen and (min-width: 1200px) and (max-width: 1600px) {
     .hero-slider .hero-item {
       padding: 200px 0;
+  height: 820px !important;
+
     }
   }
   @media only screen and (min-width: 992px) and (max-width: 1200px) {
     .hero-slider .hero-item {
       padding: 200px 0;
+  height: 740px !important;
+
     }
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .hero-slider .hero-item {
       padding: 200px 0;
+  height: 660px !important;
+
     }
   }
   @media only screen and (max-width: 767px) {
     .hero-slider .hero-item {
       padding: 100px 0;
+  height: 580px !important;
+
     }
   }
   @media only screen and (max-width: 479px) {
     .hero-slider .hero-item {
       padding: 80px 0;
+  height: 500px !important;
+
     }
   }
   .hero-slider .hero-item .hero-content {
