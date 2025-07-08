@@ -1,4 +1,76 @@
-  #contact-map {
+.contact-section{
+  padding-bottom: 300px !important;
+} 
+ 
+ /* Base Style (Desktop first) */
+.contact-section {
+  padding-bottom: 300px !important;
+}
+
+/* Extra Large Screens (≥ 1200px) */
+@media only screen and (min-width: 1200px) {
+  .contact-section {
+    padding-bottom: 300px !important;
+  }
+}
+
+/* Large Desktops (≤ 1199px) */
+@media only screen and (max-width: 1199px) {
+  .contact-section {
+    padding-bottom: 250px !important;
+  }
+}
+
+/* Medium Screens (≤ 1024px) */
+@media only screen and (max-width: 1024px) {
+  .contact-section {
+    padding-bottom: 220px !important;
+  }
+}
+
+/* Tablets (≤ 768px) */
+@media only screen and (max-width: 768px) {
+  .contact-section {
+    padding-bottom: 40px !important;
+  }
+}
+
+/* Mobile Large (≤ 576px) */
+@media only screen and (max-width: 576px) {
+  .contact-section {
+    padding-bottom: 30px !important;
+  }
+}
+
+/* Mobile Medium (≤ 480px) */
+@media only screen and (max-width: 480px) {
+  .contact-section {
+    padding-bottom: 20px !important;
+  }
+}
+
+/* Mobile Small (≤ 400px) */
+@media only screen and (max-width: 400px) {
+  .contact-section {
+    padding-bottom: 10px !important;
+  }
+}
+
+/* Tiny Devices (≤ 320px) */
+@media only screen and (max-width: 320px) {
+  .contact-section {
+    padding-bottom: 0px !important;
+  }
+}
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ #contact-map {
     width: 100%;
     height: 400px;
     z-index: 0; /* Ensure it shows behind modals if needed */

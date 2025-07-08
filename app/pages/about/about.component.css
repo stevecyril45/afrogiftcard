@@ -64,9 +64,10 @@ li, strong{
   color: #080F1E !important;
 }
 
+
+
 .about-image{
-  padding-top: 50px;
+  padding-top: 80px;
+  max-width:100%;
 }
-.about-image img{
-  max-width: 100%;
-}
+

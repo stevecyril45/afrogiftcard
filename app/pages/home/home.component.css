@@ -8,13 +8,123 @@ p{
     color: #000 !important;
 }
 .custom-section {
-    margin-top: 0px;
+    /* margin-left: 100px; */
     /* background-color: #f8f9fa; Light gray background */
     border-radius: 20px;
     /* box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); */
     padding: 3rem 2rem;
   }
+
+  #about-content1{
+    padding-left: 100px;
+  }
+
+  .banner-image{
+    width: 700px;
+    padding: 50px;
+  }
+
+
+  /* Extra Large Screens (≥ 1200px) */
+@media only screen and (min-width: 1200px) {
+  #about-content1 {
+    padding-left: 100px;
+  }
+
+  .banner-image {
+    width: 700px;
+    padding: 50px;
+  }
+}
+
+/* Large Desktops (≤ 1199px) */
+@media only screen and (max-width: 1199px) {
+  #about-content1 {
+    padding-left: 80px;
+  }
+
+  .banner-image {
+    width: 600px;
+    padding: 40px;
+  }
+}
+
+/* Medium Screens (≤ 1024px) */
+@media only screen and (max-width: 1024px) {
+  #about-content1 {
+    padding-left: 60px;
+  }
+
+  .banner-image {
+    width: 550px;
+    padding: 35px;
+  }
+}
+
+/* Tablets (≤ 768px) */
+@media only screen and (max-width: 768px) {
+  #about-content1 {
+    padding-left: 40px;
+  }
+
+  .banner-image {
+    width: 500px;
+    padding: 30px;
+  }
+}
+
+/* Mobile Large (≤ 576px) */
+@media only screen and (max-width: 576px) {
+  #about-content1 {
+    padding-left: 25px;
+  }
+
+  .banner-image {
+    width: 100%;
+    padding: 20px;
+  }
+}
+
+/* Mobile Medium (≤ 480px) */
+@media only screen and (max-width: 480px) {
+  #about-content1 {
+    padding-left: 15px;
+  }
+
+  .banner-image {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+/* Mobile Small (≤ 400px) */
+@media only screen and (max-width: 400px) {
+  #about-content1 {
+    padding-left: 10px;
+  }
+
+  .banner-image {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Tiny Devices (≤ 320px) */
+@media only screen and (max-width: 320px) {
+  #about-content1 {
+    padding-left: 5px;
+  }
+
+  .banner-image {
+    width: 100%;
+    padding: 10px;
+  }
+}
   
+
+
+
+
   .section-img {
     border-radius: 20px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -105,7 +215,11 @@ p{
   .accordion-section {
     background-color: #f6f8ff;
   }
-  
+  .accordion-item{
+    justify-self: center;
+    width: 1200px;
+    max-width: 100%;
+  }
   .custom-accordion .accordion-button {
     background-color: #fff;
     color: #333;
@@ -180,4 +294,86 @@ p{
 .animated-button:hover::after {
     right: 12px;
     opacity: 1;
+}
+
+
+
+/* Force Flexbox on image cards */
+.banner-row {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* allow horizontal scroll on small screens if needed */
+}
+
+.button{
+  background-color: #f6f8ff;
+  color: #0075e5 !important;
+}
+
+.single-banner-wrapper {
+  flex: 1 1 50%;
+  min-width: 300px; /* prevent breaking too early */
+}
+
+.single-banner {
+  position: relative;
+  overflow: hidden;
+  height: 300px; /* Uniform height */
+}
+
+.single-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevent stretching */
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: block;
+  border-radius: 10px;
+}
+@media (max-width: 1024px) {
+  .single-banner {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .single-banner {
+    height: 220px;
+  }
+}
+
+@media (max-width: 576px) {
+  .single-banner {
+    height: 200px;
+  }
+}
+
+@media (max-width: 400px) {
+  .single-banner {
+    height: 180px;
+  }
+}
+
+
+/* Responsive: adjust padding/margin if needed */
+@media (max-width: 1024px) {
+  .banner-row {
+    gap: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .banner-row {
+    gap: 12px;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-row {
+    gap: 10px;
+  }
 }
