@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserService } from 'app/core/service/user.service';
-import { AuthButtonComponent } from 'app/shared/reuseables/auth-button/auth-button.component';
+import { AuthComponent } from 'app/shared/reuseables/auth/auth.component';
 
 @Component({
   selector: 'app-check',
@@ -71,23 +71,21 @@ export class CheckComponent {
       handler.openIframe();
     }
   }
-  openLoginModal() {
-    const dialogRef = this.dialog.open(AuthButtonComponent, {
-      width: '400px',
+    openLoginModal() {
+    const dialogRef = this.dialog.open(AuthComponent, {
       disableClose: true,
+      panelClass: 'custom-dialog-pane',
+      width: '100%',
+      maxWidth: '95vw', // Limit to viewport width
+      height: '100vh', // Use full viewport height
+      maxHeight: '100vh', // Prevent exceeding device height
+      autoFocus: false // Prevent focus issues
     });
 
     dialogRef.afterClosed().subscribe((result) => {
       console.log(result);
       if (result) {
         this.isLoggedIn = true;
-      }
-      console.log(this.userServce.getCurrentUser())
-      const user = this.userServce.getCurrentUser();
-      if(user){
-        this.form.controls.email.setValue(user.auth.email);
-      }else{
-        this.form.controls.email.reset()
       }
     });
   }

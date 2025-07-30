@@ -20,7 +20,6 @@ import { CardDetailsComponent } from './pages/shop/buy/card-details/card-details
 import { DasboardComponent } from './pages/contact/dasboard/dasboard.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AuthComponent } from './shared/reuseables/auth/auth.component';
-import { AuthButtonComponent } from './shared/reuseables/auth-button/auth-button.component';
 
 @NgModule({
   declarations: [
@@ -37,8 +36,7 @@ import { AuthButtonComponent } from './shared/reuseables/auth-button/auth-button
     PaymentSuccessComponent,
     CardDetailsComponent,
     DasboardComponent,
-    AuthComponent,
-    AuthButtonComponent
+    AuthComponent
   ],
   imports: [
     BrowserModule,
