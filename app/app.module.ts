@@ -7,7 +7,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/reuseables/header/header.component';
 import { FooterComponent } from './shared/reuseables/footer/footer.component';
-import { LoginModalComponent } from './shared/reuseables/login-modal/login-modal.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { PartnersComponent } from './pages/partners/partners.component';
@@ -20,6 +19,8 @@ import { PaymentSuccessComponent } from './pages/shop/check/payment-success/paym
 import { CardDetailsComponent } from './pages/shop/buy/card-details/card-details.component';
 import { DasboardComponent } from './pages/contact/dasboard/dasboard.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthComponent } from './shared/reuseables/auth/auth.component';
+import { AuthButtonComponent } from './shared/reuseables/auth-button/auth-button.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     PaymentSuccessComponent,
     CardDetailsComponent,
     DasboardComponent,
-    LoginModalComponent
+    AuthComponent,
+    AuthButtonComponent
   ],
   imports: [
     BrowserModule,

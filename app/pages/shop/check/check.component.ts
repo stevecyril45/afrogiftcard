@@ -3,7 +3,7 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { UserService } from 'app/core/service/user.service';
-import { LoginModalComponent } from 'app/shared/reuseables/login-modal/login-modal.component';
+import { AuthButtonComponent } from 'app/shared/reuseables/auth-button/auth-button.component';
 
 @Component({
   selector: 'app-check',
@@ -72,7 +72,7 @@ export class CheckComponent {
     }
   }
   openLoginModal() {
-    const dialogRef = this.dialog.open(LoginModalComponent, {
+    const dialogRef = this.dialog.open(AuthButtonComponent, {
       width: '400px',
       disableClose: true,
     });
