@@ -1280,7 +1280,7 @@ body {
   
   /*-- Header Top Wrapper --*/
   .header-top-wrapper {
-    padding: 25px 0;
+    padding: 10px 0;
     border-bottom: 1px dashed #bababa;
   }
   
@@ -1523,6 +1523,7 @@ body {
   /*-- Header bottom --*/
   .header-bottom {
     background-color: #ffffff;
+    padding: 0px !important;
   }
   
   /*-- Header Bottom Logo --*/
@@ -1578,7 +1579,7 @@ body {
     color: #7d7d7d;
     font-weight: 700;
     line-height: 30px;
-    padding: 25px 0;
+    padding: 15px 0;
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-menu > ul > li > a {
