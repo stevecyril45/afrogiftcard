@@ -1,35 +1,33 @@
 <!-- Page Banner Section Start-->
 <!-- Page Banner Section Start-->
-<div
-  class="page-banner-section section py-3"
-  style="background-color: #fff;"
->
-  <div class="container">
-    <div class="row align-items-center">
-      
-      <!-- Page Title Start -->
-      <div class="col-md-6">
-        <h1 class="text-white m-0" style="color: #080f1e !important;">Contact Us</h1>
-      </div>
-      <!-- Page Title End -->
+<div class="page-banner-section section py-3" style="background-color: #fff;">
+    <div class="container">
+        <div class="row align-items-center">
 
-      <!-- Breadcrumb Start -->
-      <div class="col-md-6 text-md-end mt-2 mt-md-0">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb justify-content-md-end mb-0" style="background-color: transparent;">
-            <li class="breadcrumb-item">
-              <a routerLink="/home" class="text-white-50" style="color: #080f1e !important;">Home</a>
-            </li>
-            <li class="breadcrumb-item active text-white" aria-current="page" style="color: #080f1e !important;">
-              Contact Us
-            </li>
-          </ol>
-        </nav>
-      </div>
-      <!-- Breadcrumb End -->
+            <!-- Page Title Start -->
+            <div class="col-md-6">
+                <h1 class="text-white m-0" style="color: #080f1e !important;">Contact Us</h1>
+            </div>
+            <!-- Page Title End -->
 
+            <!-- Breadcrumb Start -->
+            <div class="col-md-6 text-md-end mt-2 mt-md-0">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-md-end mb-0" style="background-color: transparent;">
+                        <li class="breadcrumb-item">
+                            <a routerLink="/home" class="text-white-50" style="color: #080f1e !important;">Home</a>
+                        </li>
+                        <li class="breadcrumb-item active text-white" aria-current="page"
+                            style="color: #080f1e !important;">
+                            Contact Us
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+            <!-- Breadcrumb End -->
+
+        </div>
     </div>
-  </div>
 </div>
 <!-- Page Banner Section End-->
 
@@ -50,11 +48,13 @@
                                 help with all your Afro Gift Card inquiries.</p>
 
                             <ul>
-                                <li style="font-size: 11px;"><span>Address:</span> 7th Ave. AA Close, Festac Town, Lagos, Nigeria</li>
-                                <li  style="font-size: 11px;"><span>Email:</span>
-                                    <a routerLink="mailto:info@morrhtechsolutions.com">info&#64;morrhtechsolutions.com</a>
+                                <li style="font-size: 11px;"><span>Address:</span> 7th Ave. AA Close, Festac Town,
+                                    Lagos, Nigeria</li>
+                                <li style="font-size: 11px;"><span>Email:</span>
+                                    <a
+                                        routerLink="mailto:info@morrhtechsolutions.com">info&#64;morrhtechsolutions.com</a>
                                 </li>
-                                <li  style="font-size: 11px;"><span>Phone:</span>
+                                <li style="font-size: 11px;"><span>Phone:</span>
                                     <a routerLink="tel:+2349049283653">+234 904 928 3653</a>
                                 </li>
                             </ul>
@@ -67,45 +67,27 @@
                             </div>
                         </div>
                         <div class="contact-form col-lg-7 col-12">
-                            <h4 class="section-title">Send Your Massage</h4>
-                            <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate
-                                class="p-3 shadow rounded bg-light">
-                                <div class="mb-3">
-                                    <input type="text" formControlName="name" class="form-control"
-                                        placeholder="Your Name" />
-                                    <div class="text-danger"
-                                        *ngIf="contactForm.get('name')?.touched && contactForm.get('name')?.invalid">
-                                        Name is required and must be at least 2 characters.
-                                    </div>
-                                </div>
+                            <h4 class="section-title">Live Chat Support</h4>
+                            <div class="p-4 shadow rounded bg-light text-center"
+                                style="border: 1px solid #e1e1e1; background: #f9f9f9;">
 
-                                <div class="mb-3">
-                                    <input type="email" formControlName="email" class="form-control"
-                                        placeholder="Your Email" />
-                                    <div class="text-danger"
-                                        *ngIf="contactForm.get('email')?.touched && contactForm.get('email')?.invalid">
-                                        Please enter a valid email address.
-                                    </div>
-                                </div>
+                                <p class="mb-4" style="font-size: 15px; color: #333;">
+                                    Need quick help? Our support team is available 24/7.
+                                    Click below to chat with us instantly.
+                                </p>
 
-                                <div class="mb-3">
-                                    <textarea formControlName="message" class="form-control" placeholder="Your Message"
-                                        rows="4"></textarea>
-                                    <div class="text-danger"
-                                        *ngIf="contactForm.get('message')?.touched && contactForm.get('message')?.invalid">
-                                        Message is required and must be at least 10 characters.
-                                    </div>
-                                </div>
-
-                                <div class="d-grid">
-                                    <button type="submit" class="btn btn-primary" [disabled]="contactForm.invalid">
-                                        Submit
-                                    </button>
-                                </div>
-                            </form>
-
-                            <p class="form-messege"></p>
+                                <a href="https://tawk.to/chat/68b0244fbe8646192a41984e/1j3o0rllg" target="_blank"
+                                    class="btn" style="background-color: #080f1e; 
+                  color: #fff; 
+                  padding: 12px 25px; 
+                  border-radius: 30px; 
+                  font-weight: 600; 
+                  transition: all 0.3s ease;">
+                                    💬 Start Live Chat
+                                </a>
+                            </div>
                         </div>
+
 
                     </div>
                 </div>
