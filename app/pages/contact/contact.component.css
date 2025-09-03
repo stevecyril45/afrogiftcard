@@ -184,3 +184,32 @@
     font-size: 3rem;
   }
 }
+
+.animated-button {
+    display: inline-flex;              /* inline-flex instead of flex */
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    padding: 12px 28px;               /* more padding */
+    background-color: #080F1E;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 30px;              /* smoother pill button */
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.3s ease, padding 0.3s ease;
+    white-space: nowrap;              /* ✅ prevent text break */
+}
+
+
+
+.animated-button:hover {
+    background-color: #0075e5;
+    padding-right: 40px;              /* animate push effect */
+}
+
+.animated-button:hover::after {
+    right: 16px;
+    opacity: 1;
+}
