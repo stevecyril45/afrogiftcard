@@ -53,8 +53,8 @@
 
       <!-- Mission Content -->
       <div class="about-content col-lg-6 col-12 mb-30">
-        <h2 class="section-title" style="color: #080f1e">
-          How to <span style="color: #0075e5">Sign Up?</span>
+        <h2 class="section-title" >
+          How to <span >Sign Up?</span>
         </h2>
         <p>
           Afro Gift Card is accepted only in verified partner stores. Our
@@ -76,325 +76,83 @@
 </div>
 
 <!-- Client Section Start-->
-<div class="client-section section">
-  <div class="container">
-    <div class="row">
-      <div class="col">
-        <div class="client-slider text-center" id="clientSlider">
-          <div class="single-client">
-            <img
-              src="../../../assets/img/morrhtech.jpg"
-              alt="client"
-              style="width: 100px"
-            />
-          </div>
-          <div class="single-client">
-            <img src="../../../assets/img/morrhtech.jpg" alt="client" />
-          </div>
-          <div class="single-client">
-            <img src="../../../assets/img/morrhtech.jpg" alt="client" />
-          </div>
-          <div class="single-client">
-            <img src="../../../assets/img/morrhtech.jpg" alt="client" />
-          </div>
-          <div class="single-client">
-            <img src="../../../assets/img/morrhtech.jpg" alt="client" />
-          </div>
-          <div class="single-client">
-            <img src="../../../assets/img/morrhtech.jpg" alt="client" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="contact-section section bg-white pt-120">
-  <section class="partner-section py-5 pt-120">
-    <div class="container text-center">
-      <button
-        class="btn btn-primary btn-lg px-4 shadow-sm"
-        data-bs-toggle="modal"
-        data-bs-target="#partnerModal"
-      >
-        <i class="fas fa-plus-circle me-2"></i>Become a Partner
-      </button>
-    </div>
-  </section>
-  <!-- Client Section End-->
-</div>
-
-<!-- Partner Registration Modal -->
-<div
-  class="modal fade"
-  id="partnerModal"
-  tabindex="-1"
-  aria-labelledby="partnerModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-lg modal-dialog-centered">
-    <div class="modal-content border-0 shadow">
-      <form [formGroup]="partnerForm" (ngSubmit)="onSubmit()">
-        <div class="modal-header bg-primary text-white">
-          <h5 class="modal-title" id="partnerModalLabel">
-            <i class="fas fa-store-alt me-2"></i> Partner Registration
-          </h5>
-          <button
-            type="button"
-            class="btn-close btn-close-white"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-
-        <div class="modal-body py-4 px-4">
-          <div class="row g-3">
-            <!-- Business Name -->
-            <div class="col-md-6">
-              <label class="form-label">Business Name</label>
-              <input
-                type="text"
-                class="form-control"
-                formControlName="businessName"
-                placeholder="Enter business name"
-              />
-              <div class="text-danger" *ngIf="isInvalid('businessName')">
-                Business Name is required.
-              </div>
-            </div>
-
-            <!-- First Name -->
-            <div class="col-md-6">
-              <label class="form-label">First Name</label>
-              <input
-                type="text"
-                class="form-control"
-                formControlName="firstName"
-                placeholder="Enter first name"
-              />
-              <div class="text-danger" *ngIf="isInvalid('firstName')">
-                First Name is required.
-              </div>
-            </div>
-
-            <!-- Last Name -->
-            <div class="col-md-6">
-              <label class="form-label">Last Name</label>
-              <input
-                type="text"
-                class="form-control"
-                formControlName="lastName"
-                placeholder="Enter last name"
-              />
-              <div class="text-danger" *ngIf="isInvalid('lastName')">
-                Last Name is required.
-              </div>
-            </div>
-
-            <!-- Email -->
-            <div class="col-md-6">
-              <label class="form-label">Email Address</label>
-              <input
-                type="email"
-                class="form-control"
-                formControlName="email"
-                placeholder="Enter email"
-              />
-              <div class="text-danger" *ngIf="isInvalid('email')">
-                Valid Email is required.
-              </div>
-            </div>
-
-            <!-- CAC Registration (Yes/No) -->
-            <div class="col-md-12">
-              <label class="form-label"
-                >Is your business incorporated with the Corporate Affairs
-                Commission (CAC)?</label
-              >
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  formControlName="cac"
-                  value="yes"
-                  id="cacYes"
-                />
-                <label class="form-check-label" for="cacYes">Yes</label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  formControlName="cac"
-                  value="no"
-                  id="cacNo"
-                />
-                <label class="form-check-label" for="cacNo">No</label>
-              </div>
-              <div class="text-danger" *ngIf="isInvalid('cac')">
-                Please select an option.
-              </div>
-            </div>
-
-            <!-- Business Registration Type -->
-            <div class="col-md-6">
-              <label class="form-label">Business Registration Type</label>
-              <select class="form-select" formControlName="registrationType">
-                <option value="" disabled selected>Select type</option>
-                <option value="sole">Sole Proprietorship</option>
-                <option value="limited">Limited Liability</option>
-              </select>
-              <div class="text-danger" *ngIf="isInvalid('registrationType')">
-                Please select a registration type.
-              </div>
-            </div>
-
-            <!-- Password -->
-            <div class="col-md-6">
-              <label class="form-label">Password</label>
-              <input
-                type="password"
-                class="form-control"
-                formControlName="password"
-                placeholder="Enter password"
-              />
-              <div class="text-danger" *ngIf="isInvalid('password')">
-                Password is required (min 6 characters).
-              </div>
-            </div>
-
-            <!-- Terms and Conditions Checkboxes -->
-            <div class="col-12">
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  formControlName="terms1"
-                  id="terms1"
-                />
-                <label class="form-check-label" for="terms1">
-                  I agree to the Terms and Conditions
-                </label>
-              </div>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  formControlName="terms2"
-                  id="terms2"
-                />
-                <label class="form-check-label" for="terms2">
-                  I agree to the Privacy Policy
-                </label>
-              </div>
-              <div
-                class="text-danger"
-                *ngIf="isInvalid('terms1') || isInvalid('terms2')"
-              >
-                You must agree to all conditions.
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="modal-footer">
-          <button class="btn btn-outline-secondary" data-bs-dismiss="modal">
-            <i class="fas fa-times me-1"></i> Cancel
-          </button>
-          <button
-            class="btn btn-primary"
-            type="submit"
-            [disabled]="partnerForm.invalid"
-          >
-            <i class="fas fa-paper-plane me-2"></i> Register
-          </button>
-        </div>
-      </form>
-    </div>
-  </div>
-</div>
-
-<!-- Success Modal -->
-<div class="modal fade" id="successModal" tabindex="-1" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 shadow text-center p-4">
-      <div class="modal-body">
-        <i class="fas fa-check-circle fa-3x text-success mb-3"></i>
-        <h4 class="mb-2">Registration Successful!</h4>
-        <p class="text-muted">
-          Your application has been submitted successfully.
-        </p>
-        <button class="btn btn-primary mt-3" data-bs-dismiss="modal">
-          Close
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <!-- Benefits Section Start-->
-<div class="about-section section pb-90">
+<div class="partner-section py-5">
   <div class="container">
-    <div class="row">
-      <!-- Mission Content -->
-      <div class="about-content col-12 mb-30">
-        <h2 class="section-title text-center" style="color: #080f1e">
-          Afro Gift Card
-          <span style="color: #0075e5">Retail Partner Benefits</span>
-        </h2>
-        <p>
-          Our retail partners benefit from high-volume gift card purchases
-          driven by multiple sales channels—including online, corporate orders,
-          in-store requests, and doorstep delivery—offering customers the most
-          convenient ways to access our cards.
+    <div class="row justify-content-center">
+      <!-- Header -->
+      <div class="col-12 text-center mb-4">
+        <h1 class="display-4 text-dark">
+          OUR <span class="text-dark">PARTNERSHIP</span>
+        </h1>
+        <p class="lead text-muted mt-2">
+          Join Africa’s leading gift card platform and unlock new opportunities for your business.
         </p>
-        <p>
-          Partnering with us is hassle-free. We ensure secure fund management
-          and minimal administrative effort. No complex system integrations are
-          required—our platform is designed to work seamlessly with your
-          existing setup, allowing you to accept Afro Gift Cards with ease and
-          confidence.
+      </div>
+
+      <!-- Introduction -->
+      <div class="col-12 col-md-6 mb-4">
+        <h2 class="h4 text-dark">About Afro Gift Card</h2>
+        <p class="text-muted">
+          Launched in 2019, Afro Gift Card is Africa’s trusted digital and physical gift card platform. We empower businesses and customers across Nigeria and beyond with seamless solutions that enhance loyalty, convenience, and revenue growth. Partnering with us offers a hassle-free experience with secure fund management and easy integration.
         </p>
+      </div>
 
-        <p>
-          <strong
-            >The Unique Benefits of Partnering with Afro Gift Card:</strong
-          >
-        </p>
-        <ul
-          class="fa-ul custom-ul"
-          style="padding-left: 20px; padding-bottom: 20px"
-        >
-          <li><i class="fa fa-circle-dot"></i> Boost in Customer Loyalty</li>
-          <p>
-            Afro Gift Card users are more likely to return to partner stores
-            they’ve redeemed at. This creates repeat business and nurtures
-            long-term customer relationships, giving your store a competitive
-            edge.
-          </p>
-
-          <li><i class="fa fa-circle-dot"></i> Hassle-Free API Integration</li>
-          <p>
-            We offer a simple and secure API system that integrates easily with
-            your POS or online checkout system. Manage transactions, track
-            redemptions, and monitor performance all from your dedicated
-            dashboard.
-          </p>
-
-          <li><i class="fa fa-circle-dot"></i> Increased Brand Visibility</li>
-          <p>
-            Your brand will be listed on our platform and marketing campaigns,
-            giving you direct exposure to thousands of potential buyers looking
-            to redeem their cards. Get featured in newsletters, promotions, and
-            homepage spots.
-          </p>
-
-          <li><i class="fa fa-circle-dot"></i> Flexible Redemption Options</li>
-          <p>
-            Afro Gift Cards can be redeemed both in-store and online, giving
-            customers the freedom to shop how they prefer. This flexibility
-            encourages faster redemptions and higher purchase volume.
-          </p>
+      <!-- Benefits -->
+      <div class="col-12 col-md-6 mb-4">
+        <h2 class="h4 text-dark">Why Partner with Us?</h2>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Increased Customer Loyalty - Users return to redeem, fostering repeat business.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> High-Volume Purchases - Sales via online, corporate, in-store, and delivery channels.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Seamless API Integration - Secure API for POS and online systems.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Increased Brand Visibility - Featured in our platform and campaigns.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Flexible Redemption Options - In-store and online redemption.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Secure Transactions - End-to-end encryption and fraud protection.</li>
         </ul>
+      </div>
+
+      <!-- Requirements -->
+      <div class="col-12 col-md-6 mb-4">
+        <h2 class="h4 text-dark">Requirements to Become a Partner</h2>
+        <p class="text-muted mb-3">Prepare these details before applying:</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Business Name - Registered with CAC or equivalent authority.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Contact Information - Full name of the primary contact.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Registration Type - Sole Proprietorship, Limited Liability, Public Liability, or NGO.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Business Number (CAC) - Valid number (minimum 5 characters).</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Agreement to Terms - Accept our two sets of terms and conditions.</li>
+        </ul>
+      </div>
+
+      <!-- Process -->
+      <div class="col-12 col-md-6 mb-4">
+        <h2 class="h4 text-dark">How to Become a Partner</h2>
+        <ol class="list-unstyled">
+          <li class="mb-2"><strong>Step 1: Authentication</strong> - Login using email.</li>
+          <li class="mb-2"><strong>Step 2: Registration</strong> - Click "New Business" to register a new business.</li>
+          <li class="mb-2"><strong>Step 3: Verification</strong> - Reviewed within 1-24 hours (CAC priority).</li>
+          <li class="mb-2"><strong>Step 4: Start Accepting</strong> - Track redemptions via your dashboard.</li>
+        </ol>
+      </div>
+
+      <!-- Assurance -->
+      <div class="col-12 col-md-6 mb-4">
+        <h2 class="h4 text-dark">Our Partnership Assurance</h2>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Transparency - No hidden fees.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Support - Dedicated onboarding assistance.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Security - Robust fraud protection.</li>
+          <li class="mb-2"><i class="fas fa-circle text-primary text-dark me-2"></i> Growth - Enhanced sales opportunities.</li>
+        </ul>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="col-12 text-center">
+        <p class="mb-3 text-muted">
+          Ready to join a trusted network of businesses across Africa? Let’s redefine gifting and digital commerce together!
+        </p>
+        <a href="https://platform.afrogiftcard.com.ng" class="btn btn-lg">Apply Now</a>
       </div>
     </div>
   </div>

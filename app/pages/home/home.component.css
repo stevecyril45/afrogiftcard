@@ -5,7 +5,10 @@ height: 50px;
     color: #080F1E;
 }
 p{
-    color: #000 !important;
+    color: #000;
+}
+.mkpry{
+  color: rgb(23 51 33);
 }
 .custom-section {
     /* margin-left: 100px; */
@@ -170,7 +173,7 @@ p{
   .circle {
     width: 35px;
     height: 35px;
-    background-color: #0075e5; /* Primary color */
+    background-color: rgb(23 51 33); /* Primary color */
     color: white;
     font-weight: bold;
     border-radius: 50%;
@@ -189,7 +192,7 @@ p{
     position: absolute;
     width: 2px;
     height: 100%;
-    background-color: #6C5CE7;
+    background-color: rgb(23 51 33);
     top: 35px;
     left: 50%;
     transform: translateX(-50%);
@@ -250,7 +253,7 @@ p{
   }
   
   .custom-accordion .accordion-button:not(.collapsed) {
-    background-color: #0075e5;
+    background-color: rgb(23 51 33);
     color: #fff;
   }
   
@@ -307,10 +310,6 @@ p{
   overflow-x: auto; /* allow horizontal scroll on small screens if needed */
 }
 
-.button{
-  background-color: #f6f8ff;
-  color: #0075e5 !important;
-}
 
 .single-banner-wrapper {
   flex: 1 1 50%;

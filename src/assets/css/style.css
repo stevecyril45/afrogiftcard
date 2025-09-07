@@ -1280,7 +1280,7 @@ body {
   
   /*-- Header Top Wrapper --*/
   .header-top-wrapper {
-    padding: 25px 0;
+    padding: 10px 0;
     border-bottom: 1px dashed #bababa;
   }
   
@@ -1523,6 +1523,7 @@ body {
   /*-- Header bottom --*/
   .header-bottom {
     background-color: #ffffff;
+    padding: 0px !important;
   }
   
   /*-- Header Bottom Logo --*/
@@ -1578,7 +1579,7 @@ body {
     color: #7d7d7d;
     font-weight: 700;
     line-height: 30px;
-    padding: 25px 0;
+    padding: 15px 0;
   }
   @media only screen and (min-width: 768px) and (max-width: 991px) {
     .main-menu > ul > li > a {
@@ -1883,8 +1884,8 @@ body {
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
-    padding: 280px 0;
-  height: 900px !important;
+    padding: 150px 0;
+  height: 750px !important;
     /*-- Hero Content --*/
     /*-- Hero Content Animation --*/
   }
@@ -3649,14 +3650,14 @@ body {
     line-height: 24px;
     padding: 8px 35px;
     font-size: 12px;
-    background-color: #080F1E;
+    background-color: rgb(23 51 33);
     color: #ffffff;
     text-transform: uppercase;
     font-weight: 700;
     margin-top: 14px;
   }
   .about-content a.button:hover {
-    background-color: #0075e5;
+    background-color: rgb(46, 84, 59);
   }
   
   /*-- Team Wrapper --*/

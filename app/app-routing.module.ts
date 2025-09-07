@@ -10,6 +10,8 @@ import { BuyComponent } from './pages/shop/buy/buy.component';
 import { PaymentSuccessComponent } from './pages/shop/check/payment-success/payment-success.component';
 import { CardDetailsComponent } from './pages/shop/buy/card-details/card-details.component';
 import { DasboardComponent } from './pages/contact/dasboard/dasboard.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 
 const routes: Routes = [
@@ -24,6 +26,8 @@ const routes: Routes = [
   {path: 'check-giftcard', component: BuyComponent},
   {path: 'card-details', component: CardDetailsComponent},
   {path: 'secret-safe', component: DasboardComponent},
+  {path: 'privacy-policy', component: PrivacyPolicyComponent},
+  {path: 'terms-of-use', component: TermsComponent},
 
 ];
 

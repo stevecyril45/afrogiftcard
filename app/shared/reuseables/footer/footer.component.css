@@ -11,6 +11,9 @@
     transition: all 0.3s ease;
     cursor: pointer;
   }
+  .dg{
+    background-color: rgb(23 51 33) !important;
+  }
   
 .footer-widget p{
     position: relative;

@@ -19,7 +19,8 @@ import { PaymentSuccessComponent } from './pages/shop/check/payment-success/paym
 import { CardDetailsComponent } from './pages/shop/buy/card-details/card-details.component';
 import { DasboardComponent } from './pages/contact/dasboard/dasboard.component';
 import { HttpClientModule } from '@angular/common/http';
-import { AuthComponent } from './shared/reuseables/auth/auth.component';
+import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
+import { TermsComponent } from './pages/terms/terms.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AuthComponent } from './shared/reuseables/auth/auth.component';
     PaymentSuccessComponent,
     CardDetailsComponent,
     DasboardComponent,
-    AuthComponent
+    PrivacyPolicyComponent,
+    TermsComponent
   ],
   imports: [
     BrowserModule,

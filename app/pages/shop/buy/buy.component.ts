@@ -9,25 +9,20 @@ import { CardService } from 'app/core/service/card.service';
   styleUrls: ['./buy.component.css']
 })
 export class BuyComponent {
- form = this.fb.group({
+  form = this.fb.group({
     cardNumber: ['', [Validators.required, Validators.minLength(16)]]
   });
 
   notFound = false;
 
-  constructor(private fb: FormBuilder, private cardService: CardService, private router: Router) {}
+  constructor(private fb: FormBuilder, private cardService: CardService, private router: Router) { }
 
   checkCard() {
-  const cardNumber = this.form.value.cardNumber ?? '';
+    const cardNumber = this.form.value.cardNumber ?? '';
 
-  this.cardService.searchCard(cardNumber).subscribe(card => {
-    if (!card) {
-      this.notFound = true;
-    } else {
-      this.notFound = false;
-      this.router.navigate(['/card-details'], { state: { card } });
-    }
-  });
-}
+    this.cardService.searchCard(cardNumber).subscribe(card => {
+      window.open('https://platform.afrogiftcard.com.ng', '_blank');
+    });
+  }
 
 }

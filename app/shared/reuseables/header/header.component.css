@@ -1,3 +1,6 @@
+#stickyHeader{
+  background-color: rgb(23 51 33) !important;
+}
 .mobile-menu {
     display: none;
     background: #fff;
@@ -23,13 +26,14 @@
   }
 
 
+
   /* Logo */
   .logo {
     font-family: 'Poppins', sans-serif;
     font-weight: 700;
     font-size: 2rem;
     text-decoration: none;
-    background: #0075e5;
+    background: #000;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
@@ -43,11 +47,11 @@
   }
 
   li a, i{
-    color: #FFFFFF !important;
+    color: #000;
   }
 
   li a:hover, i:hover{
-    color: #0075e5 !important;
+    color: rgb(198 251 75)!important;
   }
 
   .sticky {

@@ -6,3 +6,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     height: 700px;
     width: 1180px !important;
   }
+  .black-text{
+    color: #04350a !important;
+  }
+  a:hover{
+    color: #04350a !important;
+    border: 1px solid #04350a;
+    background-color: darkseagreen !important;
+  }

@@ -57,7 +57,7 @@ h2, .wrap p{
   color: #080F1E;
 }
 .fa, .counter{
-  color: #0075e5 !important;
+  color: #04350a  !important;
 }
 
 li, strong{
@@ -71,3 +71,6 @@ li, strong{
   max-width:100%;
 }
 
+.transparent{
+  background: transparent;
+}
