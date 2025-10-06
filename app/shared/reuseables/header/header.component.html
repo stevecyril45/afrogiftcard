@@ -18,8 +18,7 @@
             <!-- Header Logo -->
             <div class="header-logo col-md-4 col-12">
               <a routerLink="/home" class="logo black-text">
-                <!-- <img src="assets/img/logo4.png" alt="Afro Gift Card Logo" /> -->
-                 <h2><i class="fa fa-gift"></i>Afro Gift Card</h2>
+                 <img src="assets/img/mainLogo.jpg" alt="">
               </a>
             </div>
 
@@ -71,27 +70,30 @@
         <!-- Header Bottom Logo -->
         <div class="header-bottom-logo">
           <a routerLink="/home" class="logo"
-            ><img src="../../../assets/img/logo.png" alt="logo"
-          /></a>
+            ><img src=".././../../../src/assets/img/mainLogo.jpg" alt="logo"
+          /> m</a>
         </div>
 
         <!-- Main Menu -->
         <nav id="main-menu" class="main-menu">
           <ul>
-            <li class="active"><a routerLink="/home" class="text-white">home</a></li>
+            <li class="active"><a routerLink="/home" class="text-white">HOME</a></li>
 
-            <li><a routerLink="/about" class="text-white">about</a></li>
+            <li><a routerLink="/about" class="text-white">ABOUT</a></li>
             <li>
-              <a routerLink="/partner" class="text-white">partner</a>
+              <a routerLink="/partner" class="text-white">PARTNERS</a>
             </li>
             <li>
-              <a routerLink="#" class="text-white">shop</a>
+              <a routerLink="#" class="text-white">CARDS</a>
               <ul class="sub-menu">
-                <li><a routerLink="/check-giftcard" class="text-white">Check GiftCard</a></li>
-                <li><a routerLink="/buy-giftcard" class="text-white">Buy GiftCard</a></li>
+                <li><a routerLink="/check-giftcard" class="text-white">CHECK CARD</a></li>
+                <li><a routerLink="/buy-giftcard" class="text-white">BUY CARD</a></li>
               </ul>
             </li>
-            <li><a routerLink="/contact" class="text-white">contact</a></li>
+            <li><a href="" (click)="openDonation()" class="text-white" target="_blank">DONATION</a></li>
+            <li><a href="" (click)="openEmployment()" class="text-white" target="_blank">EMPLOYMENT</a></li>
+            <li><a href="" (click)="openBlog()" class="text-white" target="_blank">BLOG</a></li>
+            <li><a routerLink="/contact" class="text-white">CONTACT</a></li>
           </ul>
         </nav>
       </div>
